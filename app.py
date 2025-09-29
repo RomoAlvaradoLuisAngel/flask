@@ -18,17 +18,19 @@ def home():
     
 app.route('/sumar/<v1>/<v2>')
 def Suma(v1, v2):
-    Sum=int(v1)+int(v2)
-    return(f"La suma de {(v1)}+{(v2)} es: {Sum}")
+    num1 = int(v1)
+    num2 = int(v2)
+    Sum= num1+  num2
+    return(f"La suma de {v1}+{v2} es: {Sum}")
 
 app.route('/restar/<v1>/<v2>')
 def Restar(v1, v2):
-    res=v1-v2
-    return(f"La resta de {int(v1)}+{int(v2)} es: {res}")
+    res=int(v1)-int(v2)
+    return(f"La resta de {v1} - {v2} es:{res}")
 
 app.route('/division/<v1>/<v2>')
 def division(v1, v2):
-    div=v1*v2
+    div=int(v1)*int(v2)
     return(f"La division de {int(v1)}+{int(v2)} es: {div}")
 
 app.route('/multiplicar/<v1>/<v2>')
