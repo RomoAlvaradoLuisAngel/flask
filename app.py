@@ -5,36 +5,21 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     mensaje = '''
-    <h1>Este es el tema 1</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi debitis dolorum, dolore dignissimos odit inventore, ex dolor quaerat aspernatur nobis repudiandae facilis ipsum veniam architecto nihil officiis. Aliquam, perferendis laudantium.</p>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, quas architecto? Aliquam quaerat accusantium libero, odio quia quam assumenda ullam provident itaque culpa neque blanditiis quasi ab nesciunt! Saepe, fugit.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque error modi quis quas, quos molestias, nesciunt, voluptatibus cumque magnam ea tempora minus asperiores sequi necessitatibus iusto quidem autem similique debitis.</p>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam porro dicta praesentium numquam reprehenderit beatae necessitatibus commodi, placeat deleniti doloribus distinctio laboriosam possimus iusto ipsam suscipit optio at rerum illum.</p>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, fugit consequuntur omnis molestias quidem ratione unde eveniet voluptates temporibus delectus nisi nostrum, ipsa nobis odit qui, accusamus at a in?</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae, minima earum distinctio quibusdam, harum animi magnam deserunt facilis assumenda, minus molestias id necessitatibus. Quam est ullam cumque vero officia.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit ipsum dignissimos ea ducimus tempore reiciendis earum tempora esse, possimus assumenda veritatis quos sint fugit, itaque corporis ipsam non eveniet!</p>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sint amet optio suscipit, quidem corrupti eaque quaerat hic, soluta repellat ipsam consequatur distinctio qui, nihil accusamus dolores sed quibusdam eveniet?</p>
-'''
-
-@app.route('/factorial/<v1>')
-def factorial(v1):
-    fact=1
-    for x in range(1,int(v1)+1):
-        fact*=x
-        
-    return(f"El factorial de {v1}! es: {fact}")
+    <h1>bienvenidos a la calculadora de Python</h1>
+<p>1.- para sumar escribe en el navegador 127.0.0.1:5000/sumar/10/20</p>
+<p>2.- para restar escribe en el navegador 127.0.0.1:5000/restar/10/20</p>
+<p>3.- para dividir escribe en el navegador 127.0.0.1:5000/dividir/10/20</p>
+<p>4.- para multiplicar escribe en el navegador 127.0.0.1:5000/multiplicar/10/20</p>
+    '''
     
+app.route('/sumar')
+def Suma(v1):
+    val1=10
+    val2=20
+    Sum=val1+val2
     
+    return("La suma de " + val1 " y " + val2 " es: " + Sum)
     
-@app.route('/otra2')
-def Hola_mundo():
-    return '<h1>Hola mundo desde Flask!</h1>'
-
-@app.route('/otra')
-def Hola_mundo1():
-    return '<h1>Hola mundo desde otra ruta!</h1>'
-
-
 
 
 if __name__ == '__main__':
