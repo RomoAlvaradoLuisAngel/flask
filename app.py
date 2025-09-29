@@ -10,15 +10,31 @@ def home():
 <p>2.- para restar escribe en el navegador 127.0.0.1:5000/restar/10/20</p>
 <p>3.- para dividir escribe en el navegador 127.0.0.1:5000/dividir/10/20</p>
 <p>4.- para multiplicar escribe en el navegador 127.0.0.1:5000/multiplicar/10/20</p>
+<footer>Romo Alvarado Luis Angel 23308060610320
+</footer>
     '''
+    return(mensaje)
     
-app.route('/sumar')
-def Suma(v1):
-    val1=10
-    val2=20
-    Sum=val1+val2
     
-    return("La suma de " + val1 " y " + val2 " es: " + Sum)
+app.route('/sumar/<v1>/<v2>')
+def Suma(v1, v2):
+    Sum=int(v1)+int(v2)
+    return(f"La suma de {(v1)}+{(v2)} es: {Sum}")
+
+app.route('/restar/<v1>/<v2>')
+def Restar(v1, v2):
+    res=v1-v2
+    return(f"La resta de {int(v1)}+{int(v2)} es: {res}")
+
+app.route('/division/<v1>/<v2>')
+def division(v1, v2):
+    div=v1*v2
+    return(f"La division de {int(v1)}+{int(v2)} es: {div}")
+
+app.route('/multiplicar/<v1>/<v2>')
+def multiplicacion(v1, v2):
+    mul=v1*v2
+    return(f"La multiplicacion de {v1}+{v2} es: {mul}")
     
 
 
