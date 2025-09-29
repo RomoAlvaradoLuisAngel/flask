@@ -1,11 +1,13 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    mensaje = '''
-    <h1>Este es el tema 1</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Este es el tema 1</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi debitis dolorum, dolore dignissimos odit inventore, ex dolor quaerat aspernatur nobis repudiandae facilis ipsum veniam architecto nihil officiis. Aliquam, perferendis laudantium.</p>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, quas architecto? Aliquam quaerat accusantium libero, odio quia quam assumenda ullam provident itaque culpa neque blanditiis quasi ab nesciunt! Saepe, fugit.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque error modi quis quas, quos molestias, nesciunt, voluptatibus cumque magnam ea tempora minus asperiores sequi necessitatibus iusto quidem autem similique debitis.</p>
@@ -14,25 +16,5 @@ def home():
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae, minima earum distinctio quibusdam, harum animi magnam deserunt facilis assumenda, minus molestias id necessitatibus. Quam est ullam cumque vero officia.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit ipsum dignissimos ea ducimus tempore reiciendis earum tempora esse, possimus assumenda veritatis quos sint fugit, itaque corporis ipsam non eveniet!</p>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sint amet optio suscipit, quidem corrupti eaque quaerat hic, soluta repellat ipsam consequatur distinctio qui, nihil accusamus dolores sed quibusdam eveniet?</p>
-'''
-@app.route('/factorial/<v1>')
-def home(v1):
-    f=1
-    for x in range(1,6):
-        f*=x
-        return(f("El factorial de {v1}! es: {f}"))
-    
-    
-@app.route('/otra2')
-def Hola_mundo():
-    return '<h1>Hola mundo desde Flask!</h1>'
-
-@app.route('/otra')
-def Hola_mundo1():
-    return '<h1>Hola mundo desde otra ruta!</h1>'
-
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+</body>
+</html>
