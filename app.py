@@ -15,12 +15,15 @@ def home():
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis reprehenderit ipsum dignissimos ea ducimus tempore reiciendis earum tempora esse, possimus assumenda veritatis quos sint fugit, itaque corporis ipsam non eveniet!</p>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sint amet optio suscipit, quidem corrupti eaque quaerat hic, soluta repellat ipsam consequatur distinctio qui, nihil accusamus dolores sed quibusdam eveniet?</p>
 '''
+
 @app.route('/factorial/<v1>')
-def home(v1):
-    f=1
-    for x in range(1,6):
-        f*=x
-        return(f("El factorial de {v1}! es: {f}"))
+def factorial(v1):
+    fact=1
+    for x in range(1,int(v1)+1):
+        fact*=x
+        
+    return(f"El factorial de {v1}! es: {fact}")
+    
     
     
 @app.route('/otra2')
