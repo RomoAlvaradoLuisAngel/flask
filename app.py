@@ -10,5 +10,11 @@ def Hola_mundo():
 def Hola_mundo1():
     return '<h1>Hola mundo desde otra ruta!</h1>'
 
+def home():
+    mensaje = '''
+    
+    '''
+
+
 if __name__ == '__main__':
     app.run(debug=True)
