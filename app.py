@@ -16,27 +16,33 @@ def home():
     return(mensaje)
     
     
-app.route('/sumar/<v1>/<v2>')
+@app.route('/sumar/<v1>/<v2>')
 def Suma(v1, v2):
     num1 = int(v1)
     num2 = int(v2)
-    Sum= num1+  num2
-    return(f"La suma de {v1}+{v2} es: {Sum}")
+    Sum= num1+num2
+    return(f"La suma de {v1} y {v2} es: {Sum}")
 
-app.route('/restar/<v1>/<v2>')
+@app.route('/restar/<v1>/<v2>')
 def Restar(v1, v2):
-    res=int(v1)-int(v2)
-    return(f"La resta de {v1} - {v2} es:{res}")
+    num1 = int(v1)
+    num2 = int(v2)
+    res= num1-num2
+    return(f"La resta de {v1} y {v2} es:{res}")
 
-app.route('/division/<v1>/<v2>')
+@app.route('/dividir/<v1>/<v2>')
 def division(v1, v2):
-    div=int(v1)*int(v2)
-    return(f"La division de {int(v1)}+{int(v2)} es: {div}")
+    num1 = int(v1)
+    num2 = int(v2)
+    div= num1/num2
+    return(f"La division de {v1} y {v2} es: {div}")
 
-app.route('/multiplicar/<v1>/<v2>')
+@app.route('/multiplicar/<v1>/<v2>')
 def multiplicacion(v1, v2):
-    mul=v1*v2
-    return(f"La multiplicacion de {v1}+{v2} es: {mul}")
+    num1 = int(v1)
+    num2 = int(v2)
+    mul= num1*num2
+    return(f"La multiplicacion de {v1} y {v2} es: {mul}")
     
 
 
